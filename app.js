@@ -1,14 +1,3 @@
-/* window.onload = ()=> {
-
-    if('serviceWorker' in navigator ){
-    
-        navigator.serviceWorker.register('/sw.js');
-    }
-    
-    
-    }
-
-*/
 // Main Application - This is the starting point 
 
 
