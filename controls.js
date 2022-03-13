@@ -9,6 +9,8 @@ function bt_toggle_live(){
 
     if (!run_state){
     document.getElementById("vlive").style.display = "block";
+  //  document.getElementById("ar").style.display = "visible";
+
     document.getElementById("camhud").innerText="Camera Mode: ON";
     ar_state= true;
     run_state=true;
@@ -20,8 +22,10 @@ function bt_toggle_live(){
     ar_state = false;
     run_state = false;
     document.getElementById("vlive").style.display = "none";
-    //document.getElementById("logos").style.display = "none";
+  //  document.getElementById("ar").style.display = "none";
     document.getElementById("camhud").innerText="Camera Mode: OFF";
+    backbuf_ctx.clearRect(0,0, backbuffer.width, backbuffer.height); // assuming gtx is backbuffer clear between renderings 
+
 
 
     }

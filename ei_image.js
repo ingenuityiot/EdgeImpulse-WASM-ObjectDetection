@@ -36,8 +36,10 @@ function ObjectOverlay(){}
 
 
 ObjectOverlay.prototype.drawAnchor =(gtx, ei_results,ei_feature_sz, mode) => {
-  gtx.strokeStyle = 'lightgreen';
-  gtx.lineWidth = 5;
+  
+  gtx.lineWidth = 3;
+  gtx.font = '20px sans-serif';
+  gtx.fillStyle = 'rgba(255, 255, 0, 0.4)';
 
   gtx.clearRect(0,0, backbuffer.width, backbuffer.height); // assuming gtx is backbuffer clear between renderings 
 
@@ -67,8 +69,14 @@ if (mode == 0){
     //draw now 
     anchors.forEach(function(obj){
       gtx.beginPath();
-
+      var txt = obj.label;
+      gtx.strokeStyle = 'rgba(255, 255, 0, 0.4)';
       gtx.arc(obj.x,obj.y, 10, 0, 2 * Math.PI);
+      gtx.fillStyle = 'rgba(255, 255, 255, 1)';
+      gtx.fillText(txt.concat("(",obj.value.toFixed(2),")"), obj.x+20, obj.y-20);
+      gtx.strokeStyle = 'rgba(255, 255, 0, 0.4)';
+      gtx.fillStyle = 'rgba(255, 255, 0, 0.4)';
+      gtx.fillRect(obj.x+10, obj.y-40,200, 25);
       gtx.stroke();
 
 
