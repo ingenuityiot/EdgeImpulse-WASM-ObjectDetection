@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title> Edge Impulse Factory 5.0 Demo</title>
+        <link rel="manifest" href="manifest.json" />
+        <link rel="stylesheet" href="css/mainwin.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="white"/>
+
+    </head>
+
+    <body class="mainwindow">
+
+         <div id="controls">
+            <button id="camhud" onclick="bt_toggle_live()">Camera Mode: Off</button>
+            <button id="ar" onclick="bt_toggle_AR()">Show Information </button>
+            <button id="config" onclick="bt_toggle_CFG()">Load Project </button>
+            <button id="fullscreen" onclick="bt_toggle_FS()">FullScreen </button>
+        </div>  
+        <div id="configbox"></div>
+        <div id="displays">
+            <video id="vlive"></video><canvas id="framebuffer"></canvas><canvas id="backbuffer"></canvas><canvas id="overlay"></canvas>
+        </div>
+
+   
+        <img id="logos" src="./media/eilogo.png"> 
+        <script src="edge-impulse-standalone.js"></script>
+        <script src="run-impulse.js"></script>
+      
+        <script src="ei_image.js"></script>
+        <script src ="app.js"></script>
+        
+        
+        <script src="controls.js"></script>
+       
+    </body>
+  
+    
+   
+  
+</html>
