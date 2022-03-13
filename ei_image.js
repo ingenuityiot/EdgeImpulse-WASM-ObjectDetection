@@ -245,6 +245,7 @@ function grabframe(){
 
         var inference_time = inference_end - inference_st;
         console.log('Inference Time: ',inference_time);
+        document.getElementById("inf_val").innerText= parseFloat(inference_time).toFixed(2);
         if(results.results.length >0){
           objoverlay.drawAnchor(ar_ctx,results,feature_pix, 1);
         }
