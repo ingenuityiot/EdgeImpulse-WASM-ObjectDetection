@@ -7,9 +7,10 @@ var classifier = new EdgeImpulseClassifier();
 (async ()=>{
 
 await classifier.init();
-
+props = await classifier.getProperties()
 
 })();
+
 
 
 if('mediaDevices' in navigator && 'getUserMedia' in navigator.mediaDevices){

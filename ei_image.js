@@ -8,6 +8,7 @@ const objdet_mode = 1; // 0: Normal object detection 1: FOMO
 var settingsd ;
 //alert("width: " +screenwidth + " height: " + screenheight);
 
+
 var objbox = new BoundingBox();
 var objoverlay = new ObjectOverlay();
 
@@ -35,6 +36,9 @@ function ObjectOverlay(){}
 
 
 ObjectOverlay.prototype.drawAnchor =(gtx, ei_results,ei_feature_sz, mode) => {
+  gtx.strokeStyle = 'lightgreen';
+  gtx.lineWidth = 5;
+
   gtx.clearRect(0,0, backbuffer.width, backbuffer.height); // assuming gtx is backbuffer clear between renderings 
 
   var anchors = [];
