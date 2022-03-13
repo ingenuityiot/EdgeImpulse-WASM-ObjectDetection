@@ -15,21 +15,12 @@ const framebuffer = document.getElementById('framebuffer');
 const backbuffer = document.getElementById('backbuffer');
 
 const frame_ar = document.getElementById('overlay');
-backbuffer.width=1280;
-backbuffer.height=720;
+backbuffer.width=screenwidth;
+backbuffer.height=screenheight;
 const vidsettings = {
     video: {
-        facingMode: 'environment',
-      width: {
-        min: 1280,
-        ideal: 1920,
-        max: 2560,
-      },
-      height: {
-        min: 720,
-        ideal: 1080,
-        max: 1440
-      }
+        facingMode: 'environment'
+      
     }
   }
 

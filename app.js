@@ -1,5 +1,5 @@
 // Main Application - This is the starting point 
-screen.orientation.lock('landscape');
+
 
 
 var classifier = new EdgeImpulseClassifier();
